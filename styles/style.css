@@ -9,8 +9,14 @@ body {
     align-items: center;
 }
 
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
 input, select, textarea {
-    margin: 2rem auto
+    margin: 1rem auto
 }
 
 select {
@@ -18,6 +24,7 @@ select {
     padding: 0.5rem;
     font-size: 2rem;
     width: 27rem;
+    height: 6rem;
     border: dotted gray 1px
 }
 
@@ -36,4 +43,10 @@ select {
 textarea {
     font-size: 1.2rem;
     border: dotted gray 1px
+}
+
+#submit {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1.4rem;
 }
