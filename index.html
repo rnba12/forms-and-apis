@@ -14,10 +14,7 @@
 <body>
     <form action="">
         <label hidden for="greeting">Greeting</label>
-        <input type="text" id="greeting" placeholder="Dear..." name="greeting">
-
-        <label hidden for="greeting">Greeting</label>
-        <input type="text" id="greeting" name="greeting" required="true">
+        <input type="text" id="greeting" placeholder="Dear..." name="greeting" required="true">
 
         <br>
         <label hidden for="event">Event</label>
@@ -30,18 +27,16 @@
         <br>
 
         <label hidden for="message">Message</label>
-        <textArea name="message" id="message" cols="41" rows="4"></textArea>
+        <textArea name="message" id="message" cols="41" rows="4" required="true"></textArea>
 
-        <label for="message">Message</label>
-        <textArea name="message" id="message" cols="30" rows="10" required="true"></textArea>
         <br>
         <input type="submit" value="Submit" id="submit">
 
     </form>
 
-    <div id="card">
-        <h5 id="cardGreeting">Greeting</h3>
-        <h2 id="cardEvent">Event</h3>
+    <div id="card" style="display:none">
+        <h5 id="cardGreeting">Greeting</h5>
+        <h2 id="cardEvent">Event</h2>
         <p id="cardMessage">Message</p>
 
     </div>
