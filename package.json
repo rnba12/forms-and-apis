@@ -1,0 +1,23 @@
+{
+  "name": "forms-and-apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnba12/forms-and-apis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnba12/forms-and-apis/issues"
+  },
+  "homepage": "https://github.com/rnba12/forms-and-apis#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
