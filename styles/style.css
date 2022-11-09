@@ -1,11 +1,39 @@
+* {
+    font-family: 'Mali', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, select, textarea {
+    margin: 2rem auto
+}
+
+select {
+    /* text-align: center; */
+    padding: 0.5rem;
+    font-size: 2rem;
+    width: 27rem;
+    border: dotted gray 1px
+}
+
 #greeting {
     border: dotted gray 1px;
     padding: 0.5rem;
-    height: 2rem;
-    width: 16rem;
+    height: 6rem;
+    width: 26rem;
     font-size: 2rem;
 }
 
 #greeting::placeholder {
 	font-size: 2rem;
+}
+
+textarea {
+    font-size: 1.2rem;
+    border: dotted gray 1px
 }
