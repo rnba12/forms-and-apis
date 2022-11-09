@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Greeting Card</title>
 </head>
 <body>
     <form action="">
-        <label for="greeting">Greeting</label>
-        <input type="text" id="greeting" name="greeting">
+        <label hidden for="greeting">Greeting</label>
+        <input type="text" id="greeting" placeholder="Dear..." name="greeting">
         <br>
-        <label for="event">Event</label>
+        <label hidden for="event">Event</label>
         <select name="event" id="event">
             <option value="">Birthday</option>
             <option value="">Christmas</option>
