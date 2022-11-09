@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
     <title>Greeting Card</title>
 </head>
 <body>
-    <form action=""></form>
+    <form action="">
+        <label for="greeting">Greeting</label>
+        <input type="text" id="greeting" name="greeting">
+        <br>
+        <label for="event">Event</label>
+        <select name="event" id="event">
+            <option value="">Birthday</option>
+            <option value="">Christmas</option>
+            <option value="">Get Well Soon</option>
+            <option value="">Congratulations</option>
+        </select>
+        <br>
+        <label for="message">Message</label>
+        <textArea name="message" id="message" cols="30" rows="30"></textArea>
+    </form>
 </body>
 </html>
