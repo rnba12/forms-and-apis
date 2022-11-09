@@ -2,6 +2,11 @@
     font-family: 'Mali', cursive;
 }
 
+h1 {
+    font-weight: 100;
+    font-size: 3rem;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -72,6 +77,7 @@ img {
 
 #cardGreeting {
     font-size: 2rem;
+    margin-top: 4rem;
 }
 
 #cardEvent {
@@ -79,5 +85,5 @@ img {
 }
 
 #cardMessage {
-    
+    margin-bottom: 4rem;
 }
