@@ -8,6 +8,7 @@ function createCard(e) {
     let event = document.getElementById("event").value;
     let message = document.getElementById("message").value;
     myForm.style.display = "none";
+    document.getElementById("card").style.display = "block"
     document.getElementById("cardGreeting").textContent = greeting;
     document.getElementById("cardEvent").textContent = event;
     document.getElementById("cardMessage").textContent = message;
