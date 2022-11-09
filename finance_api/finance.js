@@ -5,6 +5,22 @@ const list = document.querySelector('#currency-list')
 let selectedCurrency
 let newArr
 
+const myForm = document.querySelector('form');
+myForm.addEventListener('submit', liveExchange)
+
+async function liveExchange(e) {
+    e.preventDefault();
+    // let currency = document.getElementById('currency').value;
+    let url = "https://www.freeforexapi.com/api/live?pairs=EURUSD"
+    await fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        let currencyInfo = data;
+        console.log(currencyInfo);
+    })
+    .catch(console.log("error"))
+}
+
 selected.addEventListener('change', (e) => {
     list.innerHTML = ""
     selectedCurrency = e.target.value
@@ -13,7 +29,7 @@ selected.addEventListener('change', (e) => {
 })
 
 // spans created will have ids of 'c1' to 'c7', 
-// can be used to query and update with rates fetched from api
+// can be used to update with rates fetched from api
 function showCurrencies(arr) {
     let children = arr.map((currency, index) => {
         let parent = document.createElement('h6')
