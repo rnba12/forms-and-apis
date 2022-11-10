@@ -28,7 +28,7 @@ selected.addEventListener('change', (e) => {
     showCurrencies(newArr)
 })
 
-// spans created will have ids of 'c1' to 'c7', 
+// spans created will have ids of their related currency, 
 // can be used to update with rates fetched from api
 function showCurrencies(arr) {
     let children = arr.map(currency => {
