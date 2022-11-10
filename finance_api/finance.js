@@ -8,24 +8,28 @@ let newArr
 const myForm = document.querySelector('form');
 myForm.addEventListener('submit', liveExchange)
 
-async function liveExchange(e) {
-    e.preventDefault();
+async function liveExchange(cur, arr) {
     // let currency = document.getElementById('currency').value;
-    let url = "https://www.freeforexapi.com/api/live?pairs=EURUSD"
-    await fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-        let currencyInfo = data;
-        console.log(currencyInfo);
-    })
-    .catch(console.log("error"))
+    for (comp of arr) {
+        let url = `https://www.freeforexapi.com/api/live?pairs=${cur}${comp}`
+        await fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            let currencyInfo = data.rates[`${cur}${comp}`].rate;
+	            console.log(currencyInfo);
+        })
+        .catch(console.log("error")) 
+    }
+    
 }
 
 selected.addEventListener('change', (e) => {
     list.innerHTML = ""
     selectedCurrency = e.target.value
     newArr = arr.filter((curr) => curr !== selectedCurrency)
+    liveExchange(selectedCurrency, newArr);
     showCurrencies(newArr)
+
 })
 
 // spans created will have ids of 'c1' to 'c7', 
