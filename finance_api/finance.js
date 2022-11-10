@@ -13,12 +13,12 @@ async function liveExchange(e) {
     // let currency = document.getElementById('currency').value;
     let url = "https://www.freeforexapi.com/api/live?pairs=EURUSD"
     await fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-        let currencyInfo = data;
-        console.log(currencyInfo);
-    })
-    .catch(console.log("error"))
+        .then((response) => response.json())
+        .then((data) => {
+            let currencyInfo = data;
+            console.log(currencyInfo);
+        })
+        .catch(console.log("error"))
 }
 
 selected.addEventListener('change', (e) => {
@@ -31,10 +31,10 @@ selected.addEventListener('change', (e) => {
 // spans created will have ids of 'c1' to 'c7', 
 // can be used to update with rates fetched from api
 function showCurrencies(arr) {
-    let children = arr.map((currency, index) => {
+    let children = arr.map(currency => {
         let parent = document.createElement('h6')
         let child = document.createElement('span')
-        child.setAttribute('id', `c${index + 1}`)
+        child.setAttribute('id', `${currency}`)
         parent.textContent = currency
         parent.appendChild(child)
         return parent
